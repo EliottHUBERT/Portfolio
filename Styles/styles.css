@@ -1,3 +1,9 @@
+/* #FFFFFF */
+/* #FEB195 */
+/* #FD662F */
+/* #C53602 */
+/* #3B170A */
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
 
 *{
@@ -6,15 +12,23 @@
     font: size 1.4em;
 }
 
+.color{
+  color:#FFFFFF;
+  color:#FEB195;
+  color:#FD662F;
+  color:#C53602;
+  color:#3B170A;
+}
 
 /* The navigation bar */
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #C53602;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     left: 0; /* Position the navbar at the left of the page */
     width: 100%; /* Full width */
+    height: 7%;
   }
   
   /* Links inside the navbar */
@@ -22,41 +36,23 @@
     float: left;
     display: block;
     color: #f2f2f2;
+    font-size: 1.4em;
     text-align: center;
-    padding: 14px 16px;
+    line-height:50%;
+    padding: 1% 5%;
     text-decoration: none;
   }
   
   /* Change background on mouse-over */
   .navbar a:hover {
-    background: #ddd;
+    background: #FD662F;
     color: black;
-  }
-
-
-  /* The navigation bar */
-.navbarbot {
-    position: fixed; /* Set the navbar to fixed position */
-    bottom: 0; /* Position the navbar at the bottom of the page */
-    left: 0; /* Position the navbar at the left of the page */
-    width: 100%; /* Full width */
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-/* Links inside the navbar */
-.navbarbot a {
-    float: center;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
   }
 
   .header {
     position: fixed;
-    top: 0;
+    top: 6%;
+    left: 0;
     z-index: 1;
     width: 100%;
     background-color: #f1f1f1;
@@ -66,12 +62,13 @@
   .progress-container {
     width: 100%;
     height: 8px;
-    background: #ccc;
+    background: #C53602;
   }
   
   /* The progress bar (scroll indicator) */
   .progress-bar {
     height: 8px;
-    background: linear-gradient(to right, #3366ff 0%, #66ff66 100%);
+    background: #FD662F;
     width: 0%;
   }
+
