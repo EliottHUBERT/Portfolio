@@ -16,6 +16,7 @@ html{
     font-weight: bold;
     font: size 1.4em;
     text-decoration: none;
+    box-sizing:border-box
 }
 
 .color{
@@ -46,7 +47,7 @@ html{
     font-size: 1.4em;
     text-align: center;
     line-height:50%;
-    padding: 1% 5%;
+    padding: 1% 4%;
     text-decoration: underline;
     transition: 0.5s;
   }
@@ -121,11 +122,8 @@ html{
     transition: 0.5s;
   }
   
-  .footer-icon ul #linkedin{
-    padding-right: 2%;
-  }
-
   .footer-icon ul #github{
+    padding-left: 2%;
     padding-right: 2%;
   }
 
@@ -143,6 +141,8 @@ html{
     opacity: 0.9;
     transition: 0.5s;
   }
+
+/* Image parallax */
 
   .parallax {
     /* The image used */
@@ -166,10 +166,13 @@ html{
     
   }
 
+/* Nom afficher en haut ici Eliott Hubert */
+
   .parallax .nom{
     font-family: 'Oxygen', sans-serif;
     font-size: 4em;
-    color: #FFFFFF;
+    color: #C53602;
+    text-decoration: underline;
   }
 
   .parallax p{
@@ -177,6 +180,8 @@ html{
     left: 0;
     bottom: 0;
   }
+
+/* Icone de souris qui scroll */
 
   .icon-scroll,.icon-scroll:before{
   position: absolute;
@@ -212,13 +217,7 @@ html{
     transform: translateY(46px);}
 }
 
-.apropos{
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
+/* Séparation horizontale */
 
 hr{
   background-color:#FD662F;
@@ -229,6 +228,19 @@ hr{
   z-index: 20; 
 }
 
+
+/* Div a propos */
+
+.apropos{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Div compétence */
+
 .compétences{
   position: absolute;
   top: 200%;
@@ -236,6 +248,8 @@ hr{
   min-width: 100%;
   min-height: 100%;
 }
+
+/* Div parcours */
 
 .parcours{
   position: absolute;
@@ -245,6 +259,8 @@ hr{
   min-height: 100%;
 }
 
+/* Div projetss */
+
 .projets{
   position: absolute;
   top: 400%;
@@ -252,6 +268,8 @@ hr{
   min-width: 100%;
   min-height: 100%;
 }
+
+/* Div veille-technoogique */
 
 .veille-technologique{
   position: absolute;
@@ -261,13 +279,33 @@ hr{
   min-height: 100%;
 }
 
+/* Balise de scroll */
+
 .scroll{
   position: absolute;
   left: 0;
   bottom: 0;
 }
 
-.parallax .nom{
-  color: #C53602;
-  text-decoration: underline;
+/* Compétences */
+
+.compétences p {
+  position: relative;
+  width: 50%;
+  left: 5%;
 }
+.container {
+  position: relative;
+  left: 5%;
+  width: 50%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: #04AA6D;} /* Green */
