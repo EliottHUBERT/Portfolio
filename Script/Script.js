@@ -6,3 +6,14 @@ function progress_bar() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("progress-bar").style.width = scrolled + "%";
 } 
+
+window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    connectParticles: true,
+    maxParticles: 150,
+    speed: 2,
+    minDistance:150,
+    sizeVariations: 3
+  });
+}; 

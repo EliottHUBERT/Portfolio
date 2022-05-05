@@ -144,9 +144,18 @@ html{
 
 /* Image parallax */
 
+  
+.background {
+  position:  absolute;
+  display:  block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+} 
+
   .parallax {
     /* The image used */
-    background-image: url("../Images/parallax.jpg");
+    /* background-image: url("../Images/parallax.jpg"); */
 
     /* Set a specific height */
     min-height: 93%;
@@ -173,8 +182,9 @@ html{
     font-size: 4em;
     color: #C53602;
     text-decoration: underline;
+    opacity: 1;
+    z-index: 999;
   }
-
   .parallax p{
     position: absolute;
     left: 0;
@@ -193,14 +203,14 @@ html{
   margin-left: -20px;
   top: 80%;
   margin-top: -35px;
-  box-shadow: inset 0 0 0 1px #fff;
+  box-shadow: inset 0 0 0 2px #FD662F;
   border-radius: 25px;
 }
 .icon-scroll:before{
   content: '';
   width: 8px;
   height: 8px;
-  background: #fff;
+  background: #FD662F;
   margin-left: -4px;
   top: 8px;
   border-radius: 4px;
@@ -212,6 +222,9 @@ html{
 @keyframes scroll{
   0%{
     opacity: 1;}
+  45%{
+    opacity: 1;
+  }
   100%{
     opacity: 0;
     transform: translateY(46px);}
@@ -237,6 +250,67 @@ hr{
   left: 0;
   min-width: 100%;
   min-height: 100%;
+}
+
+.apropos .titre{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#FD662F;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.apropos .presentation{
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  color:black;
+  font-size: 1.2em;
+  width:45%;
+}
+
+.apropos .presentation mark{
+  background-color:#FD662F;
+  border-radius: 5px;
+}
+
+.apropos .titre2{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 50%;
+  color:#FD662F;
+  font-size: 3em;
+  text-decoration: underline;
+}
+.apropos .projetpro{
+  position: absolute;
+  top: 15%;
+  left: 51%;
+  color:black;
+  font-size: 1.2em;
+  width:45%;
+}
+
+.apropos .titre3{
+  position: absolute;
+  padding-top: 0px;
+  top: 40%;
+  left: 1%;
+  color:#FD662F;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.apropos .bts{
+  position: absolute;
+  top: 55%;
+  left: 2%;
+  color:black;
+  font-size: 1.2em;
+  width:96%;
 }
 
 /* Div compétence */
