@@ -12,7 +12,8 @@ window.onload = function() {
     selector: '.background',
     connectParticles: true,
     maxParticles: 150,
-    speed: 2,
+    color: '#C53602',
+    speed: 1,
     minDistance:150,
     sizeVariations: 3
   });

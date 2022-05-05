@@ -48,13 +48,16 @@ html{
     text-align: center;
     line-height:50%;
     padding: 1% 4%;
+    border-radius: 30px;
     text-decoration: underline;
     transition: 0.5s;
   }
   
   /* Change background on mouse-over */
   .navbar a:hover {
-    background: #FD662F;
+    background: linear-gradient(to left, #FD662F 50%, #C53602 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
     color: white;
     transform: translateY(-4%);
     transition: 0.5s;
@@ -151,6 +154,7 @@ html{
   top: 0;
   left: 0;
   z-index: 0;
+  
 } 
 
   .parallax {
@@ -178,12 +182,18 @@ html{
 /* Nom afficher en haut ici Eliott Hubert */
 
   .parallax .nom{
+    position: relative;
     font-family: 'Oxygen', sans-serif;
     font-size: 4em;
-    color: #C53602;
+    color: white;
     text-decoration: underline;
+    vertical-align: middle;
+    border-radius: 10px;
+    left: 35%;
+    width: 30%;
     opacity: 1;
-    z-index: 999;
+    z-index: 0;
+    background-color: #C53602;
   }
   .parallax p{
     position: absolute;
@@ -257,7 +267,7 @@ hr{
   padding-top: 0px;
   top: 0;
   left: 1%;
-  color:#FD662F;
+  color:#C53602;
   font-size: 3em;
   text-decoration: underline;
 }
@@ -271,7 +281,7 @@ hr{
   width:45%;
 }
 
-.apropos .presentation mark{
+mark{
   background-color:#FD662F;
   border-radius: 5px;
 }
@@ -281,7 +291,7 @@ hr{
   padding-top: 0px;
   top: 0;
   left: 50%;
-  color:#FD662F;
+  color:#C53602;
   font-size: 3em;
   text-decoration: underline;
 }
@@ -299,7 +309,7 @@ hr{
   padding-top: 0px;
   top: 40%;
   left: 1%;
-  color:#FD662F;
+  color:#C53602;
   font-size: 3em;
   text-decoration: underline;
 }
@@ -322,6 +332,71 @@ hr{
   min-width: 100%;
   min-height: 100%;
 }
+
+.compétences .scroll{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.compétences .titre4{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.compétences .langages{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  min-height: 85%;
+  min-width: 23.333%;
+  color: black;
+}
+
+.compétences .langages .titre{
+  text-align: center;
+  text-decoration: underline;
+  color: #C53602;
+  font-size: 1.7em;
+}
+
+.compétences .os{
+  position: absolute;
+  top: 15%;
+  left: 38.333%;
+  min-height: 85%;
+  min-width: 23.333%;
+  color: black;
+}
+
+.compétences .os .titre{
+  text-align: center;
+  text-decoration: underline;
+  color: #C53602;
+  font-size: 1.7em;
+}
+
+.compétences .logiciels{
+  position: absolute;
+  top: 15%;
+  left: 66.666%;
+  min-height: 85%;
+  min-width: 23.333%;
+  color: black;
+}
+
+.compétences .logiciels .titre{
+  text-align:center;
+  text-decoration: underline;
+  color: #C53602;
+  font-size: 1.7em;
+}
+
 
 /* Div parcours */
 
