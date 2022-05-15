@@ -18,3 +18,4 @@ window.onload = function() {
     sizeVariations: 3
   });
 }; 
+

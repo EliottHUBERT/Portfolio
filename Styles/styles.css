@@ -282,8 +282,10 @@ hr{
 }
 
 mark{
-  background-color:#FD662F;
+  background-color:white;
   border-radius: 5px;
+  color: #C53602;
+  font-size: 1.2em;
 }
 
 .apropos .titre2{
@@ -331,6 +333,16 @@ mark{
   left: 0;
   min-width: 100%;
   min-height: 100%;
+}
+
+.compétences ul{
+  position: relative;
+  list-style: url('../Images/caret-forward-outline.svg');
+  left: 15%
+}
+
+.compétences ul li{
+  font-size: 1.5em;
 }
 
 .compétences .scroll{
@@ -408,6 +420,16 @@ mark{
   min-height: 100%;
 }
 
+.parcours .titre{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
 /* Div projetss */
 
 .projets{
@@ -418,6 +440,61 @@ mark{
   min-height: 100%;
 }
 
+.projets .titre{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.projets .projets-Resappli{
+  position: absolute;
+  top: 17.5%;
+  left: 10%;
+  min-height: 35%;
+  min-width: 23.333%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  
+}
+
+.projets .projets-MITM{
+  position: absolute;
+  top: 17.5%;
+  left: 38.333%;
+  min-height: 35%;
+  min-width: 23.333%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.projets .projets-Teachable{
+  position: absolute;
+  top: 17.5%;
+  left: 66.666%;
+  min-height: 35%;
+  min-width: 23.333%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.projets a :hover{
+  border-color: #C53602;
+  transition: 1s;
+}
+
 /* Div veille-technoogique */
 
 .veille-technologique{
@@ -426,6 +503,16 @@ mark{
   left: 0;
   min-width: 100%;
   min-height: 100%;
+}
+
+.veille-technologique .titre{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
 }
 
 /* Balise de scroll */
@@ -458,3 +545,4 @@ mark{
 }
 
 .html {width: 90%; background-color: #04AA6D;} /* Green */
+
