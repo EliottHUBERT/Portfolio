@@ -37,7 +37,7 @@ allBoxes.forEach(box => {
 
             let scene = new ScrollMagick.Scene({
                 triggerElement: allRonds[i],
-                reverse: true
+                reverse: false
             })
             .setTween(tween)
             // .addIndicators()
@@ -48,3 +48,4 @@ allBoxes.forEach(box => {
     }
 
 })
+
