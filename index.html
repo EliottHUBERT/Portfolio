@@ -1,187 +1,253 @@
 <!DOCTYPE html>
-<html id="accueil">
+<html>
     <head>
-        <meta charset="UTF-8">
-        <link href="Styles/styles.css" rel="stylesheet" type="text/css">
-        <script src="Script/Script.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script>
-            ScrollReveal({reset: false});
-        </script>
-        <title>Portfolio BTS SIO | Eliott HUBERT</title>
-        <link rel="icon" type="image/png" href="Images/code.png" />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="/Styles/bootstrap.min.css">
+        <link rel="stylesheet" href="/Styles/styles.css">
+        <title> Portfolio </title>
+        <script src="Script/script.js"></script>
+        <script src="Script/bootstrap.min.js"></script>
     </head>
-    <header>
-        
-        <div class="navbar">
-            <a href="#accueil">Accueil</a>
-            <a href="#à-propos">A Propos</a>
-            <a href="#compétence">Compétences</a>
-            <a href="#parcours">Parcours</a>
-            <a href="#projets">Projets</a>
-            <a href="#veille-technologique">Veille technologique</a>
-            
-        </div>
-        <div class="header">
-          <div class="progress-container">
-            <div class="progress-bar" id="progress-bar"></div>
-          </div>
-        </div>
-    </header>
-    <script src="particles.js-master/dist/particles.min.js"></script>
     <body>
-        
-        <div class="parallax">
+        <nav class="navbar navbar-expand-lg fixed-top bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="Images/code.png" alt="" width="50" height="50" class="d-inline-block align-text-middle">
+                Eliott HUBERT
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                  <a class="nav-link" href="#">A Propos</a>
+                  <a class="nav-link" href="#">Compétences</a>
+                  <a class="nav-link" href="#">Parcours</a>
+                  <a class="nav-link" href="#">Projets</a>
+                  <a class="nav-link" href="#">Veille informationelle</a>
+                </div>
+              </div>
+            </div>
+            </div>
+        </nav>
+        <div class="marge-top">
             <canvas class="background"></canvas>
-            <h1 class="nom">Eliott HUBERT</h1>
-            <div class='icon-scroll'></div>
-            <p id="à-propos"></p>
-        </div >
-        <div class="apropos onscroll">
-            <hr>
-            <p class="titre">Présentation:</p>
-            <p class="presentation">Je suis <mark>Eliott Hubert</mark>, étudiant en première année de <mark>BTS SIO</mark> (Services Informatiques aux organisations), Option SLAM (Solutions Logicielles et Application Métier) à <mark>l'Institution des Chartreux</mark> à Lyon(69001).<br>
-            Actuellement diplomé du baccalauréat général option Sciences de l'ingénieur et Numérique et science de l'informatique.<br><br><br><br>
-            <a href="/Images/Curriculum vitæ Eliott HUBERT.pdf" target="_blank" class="btn">Mon CV</a>
-            </p>
-            <p class="titre2">Projet professionel:</p>
-            <p class="projetpro">Mon projet professionel est de devenir <mark>développeur web</mark> et pour cela suite à mes deux années d'étude en <mark>BTS SIO</mark> je compte faire une troisième année en <mark>licence professionelle</mark>.<br>
-              Ces trois années d'étude me permettrons d'accumuler de l'expérience et des connaissance nottament grace à des certifications.</p>
-
-            <p class="titre3">Qu'est ce que le BTS SIO?</p>
-            <p class="bts">Le Brevet de Technicien Supérieur Services informatique aux Organisations (BTS SIO) s’adresse à ceux qui souhaitent se former en deux ans aux métiers d’administrateur réseau ou de développeur pour intégrer directement le marché du travail ou continuer des études dans le domaine de l’informatique. <br><br>
-                Le <mark>BTS SIO SLAM</mark> (Solutions Logicielles et Application Métiers), est un parcours dédiés aux <mark>Passionnés du développement logiciel.</mark> Durant leurs deux années d’études, les étudiants apprennent à rédiger un cahier des charges, développer des applications et assurer leur intégration dans les systèmes informatisés de la société.<br><br>
-                Le <mark>BTS SIO SISR</mark> (Solution d’Infrastructure Système et Réseau), est une option du BTS SIO qui a pour but de former des <mark>Techniciens réseau polyvalents.</mark> Les lauréats de ce programme ont toutes les compétences nécessaires pour la gestion et la maintenance du réseau d’une entreprise. Ils peuvent également intervenir quant à l’achat du matériel réseau employé en négociant directement avec les fournisseurs.</p>
-
-            <p class="scroll" type="hidden" id="compétence"></p>
         </div>
-        <div class="compétences onscroll">
-            <hr>
-            <p class="titre4">Compétences:</p>
-            <div class="langages">
-                <p class="titre">Langages:</p>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>PHP</li>
-                    <li>MySQL</li>
-                    <li>Python</li>
-                    <li>C#</li>
-                    <li>Arduino</li>
-                </ul>
+        <div class="container-fluid">
+            <div class="container">
+                <!-- A Propos -->
+
+                <div class="row a-propos">
+                    <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h1>Présentation:</h1>
+                        <p>Je suis Eliott Hubert, étudiant en première année de BTS SIO (Services Informatiques aux organisations), Option SLAM (Solutions Logicielles et Application Métier) à l'Institution des Chartreux à Lyon(69001).
+                            Actuellement diplomé du baccalauréat général option Sciences de l'ingénieur et Numérique et science de l'informatique.
+                        </p>
+                        <a href="/Images/Curriculum vitæ Eliott HUBERT.pdf" class="btn btn-outline-primary">Mon CV</a> 
+                    </article>
+                    <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h1>Projet professionel:</h1>
+                        <p>Mon projet professionel est de devenir développeur web et pour cela suite à mes deux années d'étude en BTS SIO je compte faire une troisième année en licence professionelle.
+                            Ces trois années d'étude me permettrons d'accumuler de l'expérience et des connaissance nottament grace à des certifications.
+                        </p>
+                    </article>
+                    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1>Qu'est ce que le BTS SIO?</h1>
+                        <p>Le Brevet de Technicien Supérieur Services informatique aux Organisations (BTS SIO) s’adresse à ceux qui souhaitent se former en deux ans aux métiers d’administrateur réseau ou de développeur pour intégrer directement le marché du travail ou continuer des études dans le domaine de l’informatique. <br><br>
+                            Le BTS SIO SLAM (Solutions Logicielles et Application Métiers), est un parcours dédiés aux Passionnés du développement logiciel. Durant leurs deux années d’études, les étudiants apprennent à rédiger un cahier des charges, développer des applications et assurer leur intégration dans les systèmes informatisés de la société.<br><br>
+                            Le BTS SIO SISR (Solution d’Infrastructure Système et Réseau), est une option du BTS SIO qui a pour but de former des Techniciens réseau polyvalents. Les lauréats de ce programme ont toutes les compétences nécessaires pour la gestion et la maintenance du réseau d’une entreprise. Ils peuvent également intervenir quant à l’achat du matériel réseau employé en négociant directement avec les fournisseurs.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- Compétences -->
+
+                <div class="row compétences">
+                    <h1>Compétences:</h1>
+                    <article class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <h4>Langages:</h4>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>Python</li>
+                            <li>C#</li>
+                            <li>Arduino</li>
+                        </ul>
+                    </article>
+                    <article class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <h4> OS:</h4>
+                        <ul>
+                            <li>Windows</li>
+                            <li>Linux</li>
+                        </ul>
+                    </article>
+                    <article class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <h4>Logiciels:</h4>
+                        <ul>
+                            <li>Visual Studio Code</li>
+                            <li>WAMP/XAMP</li>
+                            <li>VMWare Workstation</li>
+                            <li>PhpMyAdmin</li>
+                            <li>Word</li>
+                            <li>Excel</li>
+                            <li>Powerpoint</li>
+                            <li>Git</li>
+                            
+                        </ul>
+                    </article>
+                    <article class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                        <h4> Certification:</h4>
+                        <ul>
+                            <li class="lien"><a href="/Images/Attestation MOOC ANSII.pdf" target="_blank">MOOC de l'ANSII</a></li>
+                            <li>Certification Pix (En cours)</li>
+                            <li>Openclassroom</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <!-- Time line -->
+                <div class="row">
+                    <div class="container">
+                        <div class="page-header">
+                            <h1 id="timeline">Parcours:</h1>
+                        </div>
+                        <ul class="timeline">
+                            <li>
+                            <div class="timeline-badge"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">2018-2021</h4>
+                                    <!-- <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p> -->
+                                    </div>
+                                    <div class="timeline-body">
+                                        <h6>Lycée polyvalent Joseph-Marie Carriat</h6>
+                                        <p>Baccalauréat général spécialité Sciences de l'Ingénieur / Numérique et Sciences de l'Informatiques, option mathématiques complémentaire.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge warning"><i class="bi bi-mortarboard-fill"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                        <h4 class="timeline-title">2021-2023</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <h6>Institution des Chartreux</h6>
+                                        <p>Brevet de Technicien Supérieur option Solutions Logicielles et Applications Métiers.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge danger"><i class="bi bi-briefcase-fill"></i></div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                        <h4 class="timeline-title">Juin 2022</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <h6>Stage</h6>
+                                            <p>Stage en entreprise chez Téréva dans le cadre de mon Brevet de Technicien Supérieur.</p><br>
+                                            <a href="/Images/Curriculum vitæ Eliott HUBERT.pdf" class="btn btn-outline-primary">Mon CV</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 
+                            <li class="timeline-inverted">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                <hr>
+                                </div>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="timeline-inverted">
+                            <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                                </div>
+                            </div>
+                            </li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Projets -->
+                <h1>Projets:</h1>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="Images/Resappli.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h4 class="card-title">Resappli</h4>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="https://github.com/EliottHUBERT/ResAppli-Projet-BTS-SIO-1" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i> Voir sur GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="Images/teachablemachine.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h4 class="card-title">Projet Teachable Machine</h4>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <a href="https://github.com/EliottHUBERT/Teachable-machine" target="_blank" class="btn btn-outline-primary"><i class="bi bi-github"></i> Voir sur GitHub</a>
+                        </div>
+                      </div>
+                    </div>
+                        <!-- <div class="col">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                        </div> -->
+                </div>
             </div>
-            <div class="os">
-                <p class="titre"> OS:</p>
-                <ul>
-                    <li>Windows</li>
-                    <li>Linux</li>
-                </ul>
-                <p class="titre"> Certification:</p>
-                <ul>
-                    <li class="lien"><a href="/Images/Attestation MOOC ANSII.pdf" target="_blank">MOOC de l'ANSII</a></li>
-                    <li>Certification Pix (En cours)</li>
-                </ul>
-            </div>
-            <div class="logiciels">
-                <p class="titre">Logiciels:</p>
-                <ul>
-                    <li>Visual Studio Code</li>
-                    <li>WAMP/XAMP</li>
-                    <li>VMWare Workstation</li>
-                    <li>PhpMyAdmin</li>
-                    <li>Word</li>
-                    <li>Excel</li>
-                    <li>Powerpoint</li>
-                    <li>Git</li>
-                    
-                </ul>
-            </div>
-            <p class="scroll" type="hidden" id="parcours"></p>
-            
-            
-        </div>
-        <div class="parcours onscroll">
-            <hr>
-            <p class="titre">Parcours:</p>
-
-            <div class="box-timeline">
-                <div class="ligne"></div>
-                <div class="rond r1" data-anim="1"><ion-icon name="school"></ion-icon></div>
-                <div class="rond r2" data-anim="2"><ion-icon name="school"></ion-icon></div>
-                <div class="rond r3" data-anim="3"><ion-icon name="briefcase"></ion-icon></div>
-                <!-- <div class="rond r4" data-anim="4"><ion-icon name="briefcase"></ion-icon></div> -->
-
-                <div class="box b1" data-anim="1">
-                    <h1>2018-2021</h1>
-                    <p>Lycée polyvalent Joseph-Marie Carriat<br>
-                    Baccalauréat général option Sciences de l'Ingénieur / Numérique et Sciences de l'Informatiques</p>
-                    <br>
-
-                </div>
-                <div class="box b2" data-anim="2">
-                    <h1>2021-2023</h1>
-                    <p>Institution des Chartreux<br>
-                        BTS SIO option Solutions Logicielles et Applications Métiers</p>
-                    <br>
-
-                </div>
-                <div class="box b3" data-anim="3">
-                    <h1>2022</h1>
-                    <p>Stage en entreprise en première années chez Téréva</p>
-                    <br>
-                    <a href="#" class="btn">Rapport de stage</a>
-
-                </div>
-                <!-- <div class="box b4" data-anim="4">
-                    <p>sqdqsdqsdsqdd</p>
-                    <br>
-                    <a href="#" class="btn">bouton</a>
-
-                </div> -->
-            </div>
-
-            <p class="scroll" type="hidden" id="projets"></p>
-        </div>
-        <div class="projets onscroll">
-            <hr>
-            <p class="titre">Projets:</p>
-            <p class="scroll" type="hidden" id="veille-technologique"></p>
-            <a href="https://github.com/EliottHUBERT/ResAppli-Projet-BTS-SIO-1" target="_blank">
-                <div class="projets-Resappli">
-                    <img src="/Images/Resappli.jpg" alt="ResAppli">
-                </div>
-            </a>
-            <a href="https://github.com/EliottHUBERT/TP-MITM" target="_blank">
-                <div class="projets-MITM">
-                    
-                </div>
-            </a>
-            <a href="https://github.com/EliottHUBERT/Teachable-machine" target="_blank">
-                <div class="projets-Teachable">
-                    <img src="/Images/teachablemachine.jpg" alt="ResAppli">
-                </div>
-            </a>
-        </div>
-        <div class="veille-technologique onscroll">
-            <hr>
-            <p class="titre">Veille technologique:</p>
-        </div>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            ScrollReveal().reveal('.onscroll');
-        </script>
+        </div>   
+        <script src="/particles.js-master/dist/particles.min.js"></script>    
     </body>
-    <footer>
-        <div class="footer-icon">
-            <ul>
-                <li id="linkedin"><a href="https://www.linkedin.com/in/eliott-hubert-0a727a234/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                <li id="github"><a href="https://github.com/EliottHUBERT" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-                <li id="mail"><a href="mailto: e.hubert@eleve.leschartreux.net" target="_blank"><ion-icon name="mail-outline"></ion-icon></ion-icon></a></li>
-            </ul>
-        </div>
-        
-    </footer>
 </html>

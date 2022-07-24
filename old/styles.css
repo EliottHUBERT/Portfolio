@@ -1,0 +1,842 @@
+/* #FFFFFF */
+/* #FEB195 */
+/* #FD662F */
+/* #C53602 */
+/* #3B170A */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font: size 1.4em;
+    text-decoration: none;
+    box-sizing:border-box;
+}
+
+.color{
+  color:#FFFFFF;
+  color:#FEB195;
+  color:#FD662F;
+  color:#C53602;
+  color:#3B170A;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Navbar + barre de progression///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+.navbar {
+    overflow: hidden;
+    background-color: #C53602;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    left: 0; /* Position the navbar at the left of the page */
+    width: 100%; /* Full width */
+    height: 7%;
+    transition: 0.5s;
+    z-index: 2;
+  }
+
+  .switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    display: block;
+    background-color: #C53602;
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+    line-height:50%;
+    padding: 1% 4%;
+    border-radius: 30px;
+    text-decoration: underline;
+    transition: 0.5s;
+  }
+
+  .navbar a #theme:hover{
+    background-color: #C53602;
+  }
+
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    background: linear-gradient(to left, #FD662F 50%, #C53602 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    color: white;
+    transform: translateY(-4%);
+    transition: 0.3s;
+  }
+
+  .header {
+    position: fixed;
+    top: 5.5%;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: #f1f1f1;
+  
+  }
+  
+  
+  .progress-container {
+    width: 100%;
+    height: 2%;
+    background: #C53602;
+    z-index: 5;
+  }
+  
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 11px;
+    background: #FD662F;
+    width: 0%;
+    z-index: 5;
+  }
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Footer///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+  footer{
+    width: 100%;
+    height: 100%;
+  }
+  .footer-icon{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 11%;
+    left: 0;
+    top:650%;
+    background: #C53602;
+    align-items: center;
+  }
+
+  .footer-icon ul{
+    width: 100%;
+    list-style: none;
+    text-align: center;
+  }
+
+  .footer-icon li {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .footer-icon li a ion-icon {
+    font-size: 225%;
+    color: #f1f1f1;
+    transition: 0.5s;
+  }
+  
+  .footer-icon ul #github{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .footer-icon ul #linkedin :hover{
+    transition: 0.5s;
+    transform: scale(1.9);
+  }
+
+  .footer-icon ul #github :hover{
+    transition: all 0.5s;
+    transform: scale(1.9);
+  }
+
+  .footer-icon ul #mail :hover{
+    transition: 0.5s;
+    transform: scale(1.9);
+  }
+
+  .footer-icon ul .auteur{
+    text-align: center;
+    width: 100%;
+    font-size: 0.7em;
+    color: white;
+  }
+
+  .footer-icon ul .auteur a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .imgftr{
+    transform: scale(1.7);
+  }
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Image de fond///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+  
+.background {
+  position:  absolute;
+  display:  block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  
+} 
+
+  .parallax {
+    /* The image used */
+    /* background-image: url("../Images/parallax.jpg"); */
+
+    /* Set a specific height */
+    min-height: 93%;
+    min-width: 100%;
+    position: absolute;
+    left: 0;
+    top:7%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+    vertical-align: middle;
+    
+  }
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Nom afficher en haut ici Eliott HUBERT///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+  
+  .parallax .container-nom .nom{
+    position: relative;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 4em;
+    color: white;
+    -webkit-text-underline-position: top;
+    -ms-text-underline-position: top;
+    text-underline-position: auto; 
+    text-decoration: underline;
+    vertical-align: middle;
+    border-radius: 10px;
+    left: 35%;
+    width: 30%;
+    opacity: 1;
+    z-index: 0;
+    background-color: #C53602;
+  }
+  .parallax p{
+    border-top: 5px solid blue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Icone de souris qui scroll///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+  .icon-scroll,.icon-scroll:before{
+  position: absolute;
+  left: 50%;
+}
+.icon-scroll{
+  width: 40px;
+  height: 70px;
+  margin-left: -20px;
+  top: 80%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 2px #C53602;
+  border-radius: 25px;
+}
+.icon-scroll:before{
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #C53602;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+
+@keyframes scroll{
+  0%{
+    opacity: 1;}
+  45%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(46px);}
+}
+
+/* Séparation horizontale */
+
+hr{
+  background-color:#C53602;
+  height: 8px;
+  width: 75%;
+  border: none;
+  border-radius: 5px;
+  z-index: 20; 
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Div à propos///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.apropos{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.apropos .titre{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.apropos .presentation{
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  color:black;
+  font-size: 1.2em;
+  width:45%;
+}
+
+.apropos .presentation .btn{
+  position: absolute;
+  display: block;
+  background-color: #C53602;
+  color: white;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: auto;
+  bottom: 0%;
+  left: 0%;
+}
+
+
+mark{
+  background-color:white;
+  border-radius: 5px;
+  color: #C53602;
+  font-size: 1.2em;
+}
+
+.apropos .titre2{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 50%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+.apropos .projetpro{
+  position: absolute;
+  top: 15%;
+  left: 51%;
+  color:black;
+  font-size: 1.2em;
+  width:45%;
+}
+
+.apropos .titre3{
+  position: absolute;
+  padding-top: 0px;
+  top: 40%;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.apropos .bts{
+  position: absolute;
+  top: 55%;
+  left: 2%;
+  color:black;
+  font-size: 1.2em;
+  width:96%;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Div compétences///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.compétences{
+  position: absolute;
+  top: 200%;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.compétences ul{
+  position: relative;
+  list-style: url('../Images/caret-forward-outline.svg');
+  left: 15%
+}
+
+.compétences ul li{
+  font-size: 1.5em;
+}
+
+.compétences .lien{
+  text-decoration: underline;
+}
+
+.compétences .lien :hover{
+  color: #C53602;
+  transition: 0.3s;
+}
+
+.compétences .scroll{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.compétences .titre4{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.compétences .langages{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  min-height: 85%;
+  min-width: 23.333%;
+  color: black;
+}
+
+.compétences .langages .titre{
+  text-align: center;
+  text-decoration: underline;
+  color: #C53602;
+  font-size: 1.7em;
+}
+
+.compétences .os{
+  position: absolute;
+  top: 15%;
+  left: 38.333%;
+  min-height: 85%;
+  min-width: 23.333%;
+  color: black;
+}
+
+.compétences .os .titre{
+  text-align: center;
+  text-decoration: underline;
+  color: #C53602;
+  font-size: 1.7em;
+}
+
+.compétences .os a{
+  color: black;
+}
+
+.compétences .logiciels{
+  position: absolute;
+  top: 15%;
+  left: 66.666%;
+  min-height: 85%;
+  min-width: 23.333%;
+  color: black;
+}
+
+.compétences .logiciels .titre{
+  text-align:center;
+  text-decoration: underline;
+  color: #C53602;
+  font-size: 1.7em;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Div parcours avec timeline///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.parcours{
+  position: absolute;
+  top: 300%;
+  left: 0;
+  min-width: 100%;
+  min-height: 150%;
+}
+
+.parcours .titre{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.parcours .scroll{
+  position: absolute;
+  bottom: 9%;
+  left: 0;
+}
+
+
+.box-timeline {
+  margin-top: 5%;
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  padding: 80px 0 250px 0;
+}
+
+.ligne {
+  height: 100%;
+  width: 8px;
+  margin: 0 auto;
+  background:#C53602;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.rond{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background:#C53602;
+  position: absolute;
+  border-radius: 1px solid #000;
+  left: 50%;
+  transform: translate(-50%) scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  transition: all 0.5s;
+}
+
+.r1{top:0%;}
+  .r1 .imgr1{
+    transform: scale(1.5);
+  }
+
+.r2{top:30%;}
+  .r2 .imgr2{
+    fill: white;
+    transform: scale(1.5);
+  }
+
+.r3{top:60%;}
+  .r3 .imgr3{
+    transform: scale(1.5);
+  }
+  
+/* .r4{top:60%;}
+  .r4 ion-icon:hover{
+    transition:0.5s;
+    transform:scale(1.5);
+  } */
+
+.box{
+  color: #C53602;
+  position: absolute;
+  min-width: 25%;
+  max-width: 25%;
+  min-height: 10%;
+  max-height: 25%;
+  padding: 20px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  left: 50%;
+  transition: all 1s;
+  transform: translate(-50%);
+  
+}
+
+.b1{top:0%;
+    left: calc(50% - 270px);
+}
+  .b1:hover{
+    transition: 0.5s;
+    transform-origin: bottom right;
+    transform: scale(1.08) translate(-50%);
+  }
+.b2{top:30%;
+    left: calc(50% + 270px);
+}
+  .b2:hover{
+    transition: 0.5s;
+    transform-origin: bottom left;
+    transform: scale(1.08) translate(-40%);
+  }
+.b3{top:60%;
+    left: calc(50% - 270px);
+}
+.b3:hover{
+  transition: 0.5s;
+  transform-origin: bottom right;
+  transform: scale(1.08) translate(-50%);
+}
+
+/* Pour ajouter une nouvelle box à la time-line */
+    /* .b4{top:60%;
+        left: calc(50% + 270px);
+    }
+    .b4:hover{
+      transition: 0.5s;
+      border: solid 3px;
+      border-color: #C53602;
+    } */
+
+.box h1{
+  margin-top: 1px;
+  text-decoration: underline;
+}
+
+.box p{
+  max-width: 100%;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin: 10px 0 20px 0;
+}
+
+.btn{
+  position: absolute;
+  display: block;
+  background-color: #C53602;
+  color: white;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 7px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: auto;
+  bottom: 5%;
+  left: 5%;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Div projets///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.projets{
+  position: absolute;
+  top: 450%;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.projets .titre{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.projets .projets-Resappli{
+  position: absolute;
+  top: 17.5%;
+  left: 10%;
+  min-height: 35%;
+  min-width: 23.333%;
+  max-height: 35%;
+  max-width: 23.333%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.projets .projets-Resappli img{
+  vertical-align: middle;
+  margin-left: 50%;
+  text-align: center;
+  transform: translate(-50%);
+  width: 90%;
+  height: 50%;
+  z-index: 0;
+}
+
+.projets .projets-Teachable{
+  position: absolute;
+  top: 17.5%;
+  left: 38.333%;
+  min-height: 35%;
+  min-width: 23.333%;
+  max-height: 35%;
+  max-width: 23.333%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.projets .projets-Teachable img{
+  vertical-align: middle;
+  margin-left: 50%;
+  text-align: center;
+  transform: translate(-50%);
+  width: 90%;
+  height: 50%;
+  z-index: 0;
+}
+
+.projets a :hover{
+  border-color: #C53602;
+  transition: 1s;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////Div veille technologiques///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.veille-technologique{
+  position: absolute;
+  top: 550%;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.veille-technologique .titre{
+  position: absolute;
+  padding-top: 0px;
+  top: 0;
+  left: 1%;
+  color:#C53602;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////Scrollbar//////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #C53602;
+  border: 31px none #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FD662F;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #FD662F;
+}
+::-webkit-scrollbar-track {
+  background: white;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #f2f2f2;
+}
+::-webkit-scrollbar-track:active {
+  background: #f5f5f5;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////item invisible pour smooth scroll///////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+.scroll{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+
+
+
+
+
