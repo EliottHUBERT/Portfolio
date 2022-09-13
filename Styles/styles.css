@@ -1,18 +1,79 @@
-*{}
+*{
+    background-color: #395668;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+}
 
 html, body{
     height: 100%;
     width: 100%;
 }
 
+.progress-container {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;    
+height: 4px;
+background: #334d5e;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+height: 4px;
+background: #c2d995;
+width: 0%;
+}
+
+.nav{
+    background-color: #334d5e;
+}
+
+.nav-link{
+    color: #9bae77;
+    transition : all 0.5s;
+}
+
+.nav-link:hover{
+    color: #c2d995;
+    transition : all 0.5s;
+}
+
+.navbar-toggler{
+    border-color: #c2d995;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon{
+    background-color: #334d5e;
+    background-image: url("../Images/menu.svg");
+    box-shadow: none;
+}
+
+.navbar-toggler-icon-bg{
+    escape-svg(#c2d995);
+}
+
 .marge-top{
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    background-image: url("/Images/25549.jpg");
+    height: 1000px;
+    width: 1000px;
+    /* background-color: red; */
+    /* background-image: url("/Images/25549.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom right; */
+}
+
+#bg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bg-light{
+    background-color: #334d5e !important;
 }
 
 .marge-top .name{
@@ -20,11 +81,13 @@ html, body{
     left: calc(50% - 3em);
     top: 35%;
 
-    color: #509bea;
+    color: white;
+    background-color: #395668;
     font-weight: bold;
     font-size: 3em;
     border-top: 5px solid;
     border-bottom: 5px solid;
+    border-color: #c2d995;
 }
 
 hr{
@@ -33,16 +96,64 @@ hr{
     height: 45px;
 }
 
+h1{
+    color: #c2d995;
+}
+
+h3{
+    color: #c2d995;
+}
+
+h4{
+    color: #c2d995;
+}
+
 #a-propos{
     position: relative;
-    margin-bottom: 180px;
+    margin-bottom: 10px;
 }
 
 #competence{
     width: 100%;
 }
 
-
+.icon-scroll,.icon-scroll:before{
+    position: absolute;
+    left: 50%;
+  }
+  .icon-scroll{
+    background-color: #395668;
+    width: 40px;
+    height: 70px;
+    margin-left: -20px;
+    top: 80%;
+    margin-top: -35px;
+    box-shadow: inset 0 0 0 2px #c2d995;
+    border-radius: 25px;
+  }
+  .icon-scroll:before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: white;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+  }
+  
+  @keyframes scroll{
+    0%{
+      opacity: 1;}
+    45%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+      transform: translateY(46px);}
+  }
 
 
 
@@ -61,10 +172,12 @@ hr{
         bottom: 0;
         position: absolute;
         content: " ";
-        width: 3px;
-        background-color: #eeeeee;
+        width: 8px;
+        border-radius: 8px;
+        background-color: #c2d995;
         left: 50%;
         margin-left: -1.5px;
+        z-index: 1;
     }
 
     .timeline > li {
@@ -94,9 +207,10 @@ hr{
 
         .timeline > li > .timeline-panel {
             width: 46%;
+            background-color: #334d5e;
             float: left;
-            border: 1px solid #d4d4d4;
-            border-radius: 2px;
+            border: 2px solid #c2d995;
+            border-radius: 8px;
             padding: 20px;
             position: relative;
             -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
@@ -121,8 +235,8 @@ hr{
                 right: -14px;
                 display: inline-block;
                 border-top: 14px solid transparent;
-                border-left: 14px solid #fff;
-                border-right: 0 solid #fff;
+                border-left: 14px solid #c2d995;
+                border-right: 0 solid #c2d995;
                 border-bottom: 14px solid transparent;
                 content: " ";
             }
@@ -139,7 +253,7 @@ hr{
             left: 50%;
             margin-left: -25px;
             background-color: #999999;
-            z-index: 100;
+            z-index: 2;
             border-top-right-radius: 50%;
             border-top-left-radius: 50%;
             border-bottom-right-radius: 50%;
@@ -164,6 +278,16 @@ hr{
                 right: auto;
             }
 
+.badge-1{
+    background-color: #999999;
+}
+.badge-2{
+    background-color: #999999;
+}
+.badge-3{
+    background-color: #999999;
+}
+
 .timeline-badge.primary {
     background-color: #2e6da4 !important;
 }
@@ -186,12 +310,17 @@ hr{
 
 .timeline-title {
     margin-top: 0;
-    color: inherit;
+    background-color: #334d5e;
+}
+
+.timeline-body, .timeline-body h6{
+    background-color: #334d5e;
 }
 
 .timeline-body > p,
 .timeline-body > ul {
     margin-bottom: 0;
+    background-color: #334d5e;
 }
 
     .timeline-body > p + p {
@@ -234,16 +363,66 @@ hr{
         }
 }
 
+.bg-git{
+    background-color: #334d5e;
+    transition: all 0.5s;
+}
 
 .github{
-    color: #272b32;
+    color: #fff;
     border-color: #272b32;
+    transition: all 0.5s;
 }
 
 .github:hover{
     color: #fff;
     background-color: #272b32;
     border-color: #272b32;
+    transition: all 0.5s;
+}
+
+.github:hover .bg-git{
+    color: #fff;
+    background-color: #272b32;
+    border-color: #272b32;
+    transition: all 0.5s;
+}
+
+.github:focus{
+    color: #fff;
+    background-color: #272b32;
+    border-color: #272b32;
+    box-shadow: none;
+    transition: all 0.5s;
+}
+
+.github:focus .bg-git{
+    color: #fff;
+    background-color: #272b32;
+    border-color: #272b32;
+    box-shadow: none;
+    transition: all 0.5s;
+}
+
+.btn{
+    border-width: 2px;
+}
+
+.btn-doc{
+    color: #c2d995;
+    border-color: #c2d995;
+}
+
+.btn-doc:hover{
+    color: #fff;
+    background-color: #9bae77 !important;
+    border-color: #9bae77 !important;
+}
+
+.btn-doc:focus{
+    color: #fff;
+    background-color: #9bae77 !important;
+    border-color: #9bae77 !important;
 }
 
 html, body {
@@ -259,8 +438,103 @@ html, body {
       z-index: 0;
 }
 
-footer{
-    background: #509bea;
+.lien{
+    color: #9bae77;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.lien:hover{
+    color: #c2d995;
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+
+
+.card{
+    border: 4px solid #c2d995;
+    border-radius: 8px;
+}
+
+.card-body{
+    background-color: #334d5e;
+    border-radius: 4px;
+}
+
+.card-text{
+    background-color: #334d5e;
+}
+
+.card-title{
+    background-color: #334d5e;
+}
+
+.accordion{
+    --bs-accordion-border-color: #c2d995;
+    --bs-accordion-btn-focus-border-color: #c2d995;
+    --bs-accordion-btn-focus-box-shadow: #c2d995;
+    --bs-accordion-active-color: #c2d995;
+    --bs-accordion-btn-color: #c2d995;
+    --bs-accordion-btn-bg: #c2d995;
+    --bs-accordion-btn-icon: url("../Images/chevron-down.svg");
+    --bs-accordion-btn-active-icon: url("../Images/chevron-up.svg");
+}
+
+.accordion-header{
+    background-color: #c2d995;
+}
+
+.accordion-body{
+    background-color: #334d5e;
+    border-color: #c2d995;
+}
+
+.accordion-button{
+    background-color: #334d5e;
+    color: white;
+    border-color: #c2d995;
+}
+
+.accordion-button::after{
+    color: #c2d995;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: #334d5e;
+    color: white;
+    border-color: #c2d995;
+}
+
+.accordion-button:not(.collapsed)::after{
+    color: #c2d995;
+}
+
+.img-accordion{
+    width: 50%;
+    height: 75%;
+}
+
+.btn-marge{
+    margin-bottom: 1em;
+}
+
+.btn-tableau{
+    align-items: center;
+    margin-top: 1em;
+    color: #c2d995;
+    border-color: #c2d995;
+}
+
+.btn-tableau:hover{
+    color: #fff;
+    background-color: #9bae77 !important;
+    border-color: #9bae77 !important;
+}
+
+.btn-tableau:focus{
+    color: #fff;
+    background-color: #9bae77 !important;
+    border-color: #9bae77 !important;
 }
 
 .bottom-footer{
@@ -278,6 +552,14 @@ footer{
 
 .bottom-footer a .bi-linkedin{
     margin-left: 1%;
+}
+
+.bg-social{
+    background-color: #334d5e;
+}
+
+.social{
+    background-color: #334d5e;
 }
 
 .social:link{
@@ -298,5 +580,5 @@ footer{
 }
 
 .bottom-footer{
-    background: #3b74b0;
+    background: #334d5e;
 }
